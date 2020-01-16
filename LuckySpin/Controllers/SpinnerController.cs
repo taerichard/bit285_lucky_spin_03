@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using LuckySpin.Models;
 
 namespace LuckySpin.Controllers
 {
@@ -8,11 +9,25 @@ namespace LuckySpin.Controllers
         Random random = new Random();
 
         //The Conroller to receive the Luck number from the Route
-        public IActionResult Index(int luck = 7) //Default value for luck is 7
+        public IActionResult Index(int luck) //Default value for luck is 7
         {
+
+            Spin spin = new Spin();
+            int a = spin.A = random.Next(1, 10);
+            int b = spin.B = random.Next(1, 10);
+            int c = spin.C = random.Next(1, 10);
+             spin.LuckyNumber = luck;
+            string imageDis = spin.imageDisplayValue = (a == luck || b == luck || c == luck) ? "block" : "none";
+
+            return View(spin);
+
+
+
+            /*
             int a = random.Next(1, 10);
             int b = random.Next(1, 10);
             int c = random.Next(1, 10);
+
 
             // Load up the ViewBag for use by the Spinner View "Index.cshtml"
             ViewBag.ImgDisplay = (a == luck || b == luck || c == luck)?"block":"none";
@@ -22,6 +37,7 @@ namespace LuckySpin.Controllers
             ViewBag.luck = luck;
 
             return View();
+            */
         }
     }
 }
