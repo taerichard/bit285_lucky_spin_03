@@ -9,9 +9,10 @@ namespace LuckySpin.Controllers
         Random random = new Random();
 
         //The Conroller to receive the Luck number from the Route
+        
         public IActionResult Index(int luck) //Default value for luck is 7
         {
-
+            // working on dependency injection for question 5.  DInjecting TextTransformService in index.cshtml
             Spin spin = new Spin();
             int a = spin.A = random.Next(1, 10);
             int b = spin.B = random.Next(1, 10);

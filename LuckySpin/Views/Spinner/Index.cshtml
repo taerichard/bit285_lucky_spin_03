@@ -1,5 +1,5 @@
 ﻿@model LuckySpin.Models.Spin
-
+@inject LuckySpin.Models.TextTransformService
 
 
 <!DOCTYPE html>
@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="/luckyStyles.css">
 </head>
 <body>
+    <h1></h1>
     <button onclick='history.go(0)'>Spin</button>
     <div>@Model.A</div><div>@Model.B</div><div>@Model.C</div>
-    <h1> Lucky @Model.LuckyNumber </h1>
+    <h1> Lucky  @Model.LuckyNumber </h1>
     <img src="/Images/LuckySpinCoins.jpg" alt="Coins" style="display:@Model.imageDisplayValue" />
 </body>
 </html>
