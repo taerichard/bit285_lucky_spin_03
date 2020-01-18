@@ -19,8 +19,10 @@ namespace LuckySpin.Models
                 case 3:
                     return "Three";
                 case 4:
-                    return "Five";
+                    return "Four";
                 case 5:
+                    return "Five";
+                case 6:
                     return "Six";
                 case 7:
                     return "Seven";
