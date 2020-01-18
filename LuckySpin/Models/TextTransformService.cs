@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace LuckySpin.Models
 {
-    public class TextTransformService
+    public class TextTransformService 
     {
         
-        public string numberToText(int num)
+        public string NumberToText(int num)
         {
             switch (num)
             {

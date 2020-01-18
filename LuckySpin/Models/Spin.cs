@@ -11,7 +11,7 @@ namespace LuckySpin.Models
         public int B;
         public int C;
         public int LuckyNumber { get; set; }
-        public string imageDisplayValue { get; set; }
+        public string ImageDisplayValue { get; set; }
 
     }
 }
